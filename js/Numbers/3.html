@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    alert(getDecimal(12.345));
+    alert(getDecimal(1.2));
+    alert(getDecimal(-1.2));
+
+//приходящее число отнимается от того же числа у котор убираеться точка используя Math.trunc(). Все это округляеться до трех знаков после запятой
+    function getDecimal(num) {
+        return (num - Math.trunc(num)).toFixed(3); 
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+/*
+Напишите функцию randomInteger(min, max) для генерации
+случайного целого числа между min и max, включая min,max как возможные
+значения. 
+*/
+alert(randomInteger(3, 6));
+
+
+//Минимальное число отнимается от максимального, получаем диапазон измерений, добавляем ему 1 для включения максимального числа. 
+//Умножаем диапазон на Math.random(). К результату плюсуем минимум. 
+//Все это округляем до меньшего значения.
+function randomInteger(min, max){ 
+    return Math.floor(min + (Math.random() * (max - min + 1)));
+}
+
+
+</script>
