@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-5</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+let arr = [];
+let word;
+do{
+    word = prompt("Введите значения","");
+    //promt по умолчанию выводит все значения в типе string. Идет проверка word это число и word не null и word не "" если да, то переобразовывает в число и добавляет в массив 
+    if(!isNaN(word) && word != null && word != ""){ 
+        arr.push(+word);
+    }
+
+}while(!isNaN(word) && word != null  && word != "");// опять же проверка что и выше, если всё true то повторить цикл
+
+// вариант с for...in Но его лучше не использовать, он медленее и и перебирает все, все таки заточен под object. В нашем же случае все елементы типа number так что можно :) 
+function sum(arr){
+    let x = 0;
+    for(key in arr){
+        x += arr[key];
+    }
+    return x;
+};
+//Альтернативный и правельный вариант функции с использованием for...of
+function sum1(arr){
+    let x = 0;
+    for(key of arr){
+        x += key
+    }
+    return x;
+};
+
+alert(arr);
+alert(sum(arr));
+alert(sum1(arr));
+
+</script>

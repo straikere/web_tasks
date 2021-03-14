@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+function prn(n){
+    let array = [], rezult = [], lim = Math.sqrt(n), sum = 0;
+    //забиваем массив array
+    for(let i = 2; i <= n; i++){
+        array.push(i);
+    }
+    // Удаляем кратные 2, 3, 5...
+    for(let i = 2; i < lim; i++){
+        if(array[i]){
+            for(let j = i * i; j < n; j += i){
+                array[j] = false;
+            }
+        }
+    }
+    //Все значения массива rezult[i] true являются простыми числами, забиваем целые числа в другой масив
+    for(let i = 0; i < n; i++){
+        if(array[i]){
+            rezult.push(array[i]);
+        }
+    }
+    // Суммируем данные масива rezult
+    for(let  i = 0; i < rezult.length; i++){
+        sum += rezult[i];
+    }
+    return sum;
+}
+
+alert(prn(13));
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+function maxSubSum(arr){
+    let maxSum = 0;
+    let practialSum = 0;
+    //для каждого елемента массива, добавляем значение  practialSum и запоминаем максимум на данный момент, partialSum присваевается 0 если partialSum за иттерацию отрицательное 
+    for(let item of arr){
+        practialSum += item;
+        maxSum = Math.max(maxSum, practialSum);
+        if (practialSum < 0){practialSum = 0};
+    }
+    return maxSum;
+}
+
+alert( maxSubSum([2, -1, 2, 3, -9]) ); // 6
+alert( maxSubSum([-1, 2, 3, -9, 11]) ); // 11
+alert( maxSubSum([-2, -1, 1, 2]) ); // 3
+alert( maxSubSum([100, -9, 2, -3, 5]) ); // 100
+alert( maxSubSum([1, 2, 3]) ); // 6
+
+alert( maxSubSum([-1, -2, -3]) ); // 0
+
+    
+</script>
