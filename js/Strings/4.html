@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
 <script>
+    // Задача 4
+    // Есть стоимость в виде строки: "$120".То есть, первым идёт знак валюты, а затем – число.
+    // Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять число - значение, в данном случае 120.
 
-alert(extractCurrencyValue("$500"));
-alert(typeof extractCurrencyValue("$120"));
+
+    alert(extractCurrencyValue("$500"));
+    alert(typeof extractCurrencyValue("$120"));
 
 
-//Обявляем в функции пустую строку, далее цикл фор колличество проходов вычисляется с длинны строки. 
-//внутри цикла имеем условие Если i (это позиция первой буквы в слове а это у нас $) равно 0, то ничего не делаем
-//иначе добавляем все остальные символы. после окончания выводим cur но перед этим меняем строку на число или унарным + или функцией Number();
-function extractCurrencyValue(str){
-    let cur = ""; 
-    for(let i = 0; i < str.length; i++){
-        if(i == 0){
-        }else{
-            cur=cur+str.charAt(i);
+    //Обявляем в функции пустую строку, далее цикл фор колличество проходов вычисляется с длинны строки. 
+    //внутри цикла имеем условие Если i (это позиция первой буквы в слове а это у нас $) равно 0, то ничего не делаем
+    //иначе добавляем все остальные символы. после окончания выводим cur но перед этим меняем строку на число или унарным + или функцией Number();
+    function extractCurrencyValue(str) {
+        let cur = "";
+        for (let i = 0; i < str.length; i++) {
+            if (i == 0) {
+            } else {
+                cur = cur + str.charAt(i);
+            }
         }
+        return +cur;
     }
-    return  +cur;
-}
-    
+
 </script>

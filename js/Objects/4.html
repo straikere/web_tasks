@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 4
+    // Создайте функцию multiplyNumeric, которая получает объект и умножает все численные свойства на 2. Например:
+    //  до вызова
+    // var menu = {
+    //     width: 200,
+    //     height: 300,
+    //     title: "My menu"
+    // };
 
-function multiplyNumeric(obj){
-    for(key in obj){
-        if(typeof(obj[key]) == "number"){
-            obj[key] *= 2;
+    // multiplyNumeric(menu);
+
+    //  после вызова
+    // menu = {
+    //     width: 400,
+    //     height: 600,
+    //     title: "My menu"
+    // };
+
+
+    function multiplyNumeric(obj) {
+        for (key in obj) {
+            if (typeof (obj[key]) == "number") {
+                obj[key] *= 2;
+            }
+
         }
-
     }
-}
 
-let menu = {
-    width:200,
-    height:300,
-    title:"My menu",
-}
+    let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu",
+    }
 
-multiplyNumeric(menu);
+    multiplyNumeric(menu);
 
 </script>

@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
-
-alert(checkSpam("By viagra in us shop"));
-alert(checkSpam("Only us have XXX video"));
-alert(checkSpam("Hello i call you, latter?"));
+    // Задача 2
+    // Напишите функцию checkSpam(str), которая возвращает true, если строка str содержит „viagra“ или „XXX“, а иначе false.
 
 
-//Строка провереяется чере indexOf() Если в строке найдено слово "viagra" или "XXX", то возвращается true
-//иначе false
+    alert(checkSpam("By viagra in us shop"));
+    alert(checkSpam("Only us have XXX video"));
+    alert(checkSpam("Hello i call you, latter?"));
 
-function checkSpam(str){
-    if (str.indexOf("viagra") >= 0 || str.indexOf("XXX") >= 0){
-        return true;
-    }else{
-        return false;
+
+    //Строка провереяется чере indexOf() Если в строке найдено слово "viagra" или "XXX", то возвращается true
+    //иначе false
+
+    function checkSpam(str) {
+        if (str.indexOf("viagra") >= 0 || str.indexOf("XXX") >= 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
-}
 
 </script>

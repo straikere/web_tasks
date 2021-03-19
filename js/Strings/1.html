@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 1
+    // Напишите функцию ucFirst(str), которая возвращает строку str с заглавным первым символом, например: (Создайте функцию, используя toUpperCase() и charAt().)
 
-alert(ucFirst("welcome"));
-alert(ucFirst("bread"));
+    alert(ucFirst("welcome"));
+    alert(ucFirst("bread"));
 
 
-//Обявляем в функции пустую строку, далее цикл фор колличество проходов вычисляется с длинны строки. 
-//внутри цикла имеем условие Если i (это позиция первой буквы в слове) равно 0, то добавляем в пустую строку (up) первый символ в верхнем регистре
-//иначе добавляем все остальные символы. после окончания выводим up
-function ucFirst(str){
-    let up = ""; 
-    for(let i = 0; i < str.length; i++){
-        if(i == 0){
-            up=up+str.charAt(i).toUpperCase();
-        }else{
-            up=up+str.charAt(i);
+    //Обявляем в функции пустую строку, далее цикл фор колличество проходов вычисляется с длинны строки. 
+    //внутри цикла имеем условие Если i (это позиция первой буквы в слове) равно 0, то добавляем в пустую строку (up) первый символ в верхнем регистре
+    //иначе добавляем все остальные символы. после окончания выводим up
+    function ucFirst(str) {
+        let up = "";
+        for (let i = 0; i < str.length; i++) {
+            if (i == 0) {
+                up = up + str.charAt(i).toUpperCase();
+            } else {
+                up = up + str.charAt(i);
+            }
         }
+        return up;
     }
-    return up;
-}
 
 </script>

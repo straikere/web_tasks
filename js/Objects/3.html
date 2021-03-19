@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 3
+    // Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат.
+    // Если объект пустой, то результат должен быть 0.
+    // Например:
+    // "use strict";
 
-let salaries ={
-    "Вася": 100,
-    "Петя": 300,
-    "Даша": 250,
-}
+    // var salaries = {
+    //   "Вася": 100,
+    //   "Петя": 300,
+    //   "Даша": 250
+    // };
+
+    // ... ваш код выведет 650
 
 
-let sum = 0;
+    let salaries = {
+        "Вася": 100,
+        "Петя": 300,
+        "Даша": 250,
+    }
 
-for (key in salaries){
-    sum += salaries[key];
-}
 
-alert(sum);
+    let sum = 0;
+
+    for (key in salaries) {
+        sum += salaries[key];
+    }
+
+    alert(sum);
 
 </script>

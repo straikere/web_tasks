@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 3
+    // Создайте функцию truncate(str, maxlength), которая проверяет длину строки str, и если она превосходит maxlength – заменяет конец str на "...",
+    // так чтобы ее длина стала равна maxlength. Результатом функции должна быть (при необходимости) усечённая строка.
 
-    
+
     alert(truncate("welcome", 12));
     alert(truncate("welcome", 12).length);
-    alert(truncate("bread",3));
-    alert(truncate("bread",3).length);
+    alert(truncate("bread", 3));
+    alert(truncate("bread", 3).length);
 
 
-//Обявляем в функции пустую строку, далее цикл фор, колличество проходов равно maxlenght . 
-//внутри цикла имеем условие пока i (это позиция первой буквы в слове) меньше длинны всей строчки, то добавляем в пустую строку (rez) символ строки
-//иначе добавляем "." после окончания выводим rez
-function truncate(str, maxlenght){
-    let rez = ""; 
-    for(let i = 0; i < maxlenght; i++){
-        if(i < str.length){
-            rez=rez+str.charAt(i);
-        }else{
-            rez=rez+".";
+    //Обявляем в функции пустую строку, далее цикл фор, колличество проходов равно maxlenght . 
+    //внутри цикла имеем условие пока i (это позиция первой буквы в слове) меньше длинны всей строчки, то добавляем в пустую строку (rez) символ строки
+    //иначе добавляем "." после окончания выводим rez
+    function truncate(str, maxlenght) {
+        let rez = "";
+        for (let i = 0; i < maxlenght; i++) {
+            if (i < str.length) {
+                rez = rez + str.charAt(i);
+            } else {
+                rez = rez + ".";
+            }
         }
+        return rez;
     }
-    return rez;
-}
 </script>

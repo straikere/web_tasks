@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 2
+    // Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть.
+    // Работать должно так:
+    // function isEmpty(obj) {
+    //   /* ваш код */
+    // }
+
+    // var schedule = {};
+
+    // alert( isEmpty(schedule) ); // true
+
+    // schedule["8:30"] = "подъём";
+
+    // alert( isEmpty(schedule) ); // false
 
 
-function isEmpty(obj){
-    for(key in obj){
-        return false;
+    function isEmpty(obj) {
+        for (key in obj) {
+            return false;
+        }
+        return true;
     }
-    return true;
-}
 
-let schedule = {};
+    let schedule = {};
 
-alert(isEmpty(schedule));
+    alert(isEmpty(schedule));
 
-schedule['8:30'] = "подъём";
+    schedule['8:30'] = "подъём";
 
-alert(isEmpty(schedule));
+    alert(isEmpty(schedule));
 
 
 </script>

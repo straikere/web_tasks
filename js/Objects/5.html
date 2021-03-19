@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 5
+    // Написать фунцию клонирования объекта
+    // Var newObj = cloneObj(Obj);
 
-let Obj = {
-    "num": 20,
-    "name": "Alex",
-    "married": true
-}
 
-function cloneObj(obj){
-    let x = {};
-    for(key in obj){
-        x[key] = obj[key]; 
+    let Obj = {
+        "num": 20,
+        "name": "Alex",
+        "married": true
     }
-    return x;
-}
 
-let newObj = cloneObj(Obj);
+    function cloneObj(obj) {
+        let x = {};
+        for (key in obj) {
+            x[key] = obj[key];
+        }
+        return x;
+    }
+
+    let newObj = cloneObj(Obj);
 
 </script>
