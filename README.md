@@ -3,7 +3,7 @@
 
 # Описание
 
-Числа - Numbers  Готово\
+Числа - Numbers  ```diff ! Готово```\
 Строки - Strings\
 Объекты - Objects\
 Массивы - Arrays\
