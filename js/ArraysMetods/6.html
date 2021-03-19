@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1</title>
+    <title>6</title>
 </head>
 <body>
     
@@ -13,9 +13,15 @@
 
 <script>
 
+let arr = ["HTML","JavaScript","CSS"];
 
-let goods = ["Apple","Orange","Plump"];
+function sorted(arr){
+    return arr.slice().sort(); //slice() без аргументов создает копию массива;
+}
 
-alert(goods[goods.length-1]);
+let arrSorted = sorted(arr);
 
+alert(arr)
+alert(arrSorted);
+    
 </script>
