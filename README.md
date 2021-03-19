@@ -3,9 +3,10 @@
 
 # Описание
 
-Числа - Numbers `Готово`\
-Строки - Strings\
-Объекты - Objects\
+- Числа - Numbers `Готово`\
+  - [x] Задание 1
+- Строки - Strings `Готово`\
+- Объекты - Objects `Готово`\
 Массивы - Arrays\
 Массивы Методы - ArraysMetods\
 Массивы Методы перребора - ArraysMetodsPrbr\
