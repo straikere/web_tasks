@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 6
+    // Создайте функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, если найдено, или - 1, если не найдено.
+    // Например:
+    // arr = ["test", 2, 1.5, false];
 
-let arr = ["test", 2, 1.5, false];
+    // find(arr, "test"); // 0
+    // find(arr, 2); // 1
+    // find(arr, 1.5); // 2
+
+    // find(arr, 0); // -1
 
 
-function find(arr, value){
-    for(let i = 0; i < arr.length; i++){
-        if (arr[i] === value){
-            return alert(i);
+    let arr = ["test", 2, 1.5, false];
+
+
+    function find(arr, value) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === value) {
+                return alert(i);
+            }
         }
+        return alert(-1);
     }
-    return alert(-1);
-}
 
-find(arr, "test"); //0
-find(arr, 2); //1
-find(arr, 1.5); //2
-find(arr, "1.5"); //-1
+    find(arr, "test"); //0
+    find(arr, 2); //1
+    find(arr, 1.5); //2
+    find(arr, "1.5"); //-1
 
-find(arr, 0); //-1
+    find(arr, 0); //-1
 
 </script>

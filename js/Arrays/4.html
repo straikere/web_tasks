@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
-
 <script>
+    // Задача 4
+    // Напишите код для вывода alert случайного значения из массива:
+    // var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    // P.S. Код для генерации случайного целого от min to max включительно:
+    // var rand = min + Math.floor(Math.random() * (max + 1 - min));
 
-let arr = ["Яблоко","Апельсин", "Груша", "Лимон"];
 
-function rand(min, max){
-    return min + Math.floor(Math.random() * (max-min+1));
-}
+    let arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
 
-alert(arr[rand(0,arr.length - 1)]);
+    function rand(min, max) {
+        return min + Math.floor(Math.random() * (max - min + 1));
+    }
+
+    alert(arr[rand(0, arr.length - 1)]);
 
 </script>
