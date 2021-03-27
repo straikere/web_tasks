@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // Задача 10
+    // Анаграммы – слова, состоящие из одинакового количества одинаковых букв, но в разном порядке.Например:
+    // воз - зов
+    // киборг - гробик
+    // корсет - костер - сектор
+    // Напишите функцию aclean(arr), которая возвращает массив слов, очищенный от анаграмм.
+    //     Например:
+    // var arr = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
+
+    // alert(aclean(arr)); // "воз,киборг,корсет" или "ЗОВ,гробик,сектор"
+    // Из каждой группы анаграмм должно остаться только одно слово, не важно какое.
+
+    let arr = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
+
+    function aclean(array){
+        let map = new Map();
+
+        for(let word of array){
+            let sorted = word.toLowerCase().split('').sort().join();
+            map.set(sorted, word);
+        }
+        return Array.from(map.values());
+    }
+
+    alert(aclean(arr));
+
+</script>

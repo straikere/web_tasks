@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
 
 <script>
+    // Задача 6
+    // Есть массив строк arr.Создайте массив arrSorted – из тех же элементов, но отсортированный.
+    // Исходный массив не должен меняться.
+    // var arr = ["HTML", "JavaScript", "CSS"];
 
-let arr = ["HTML","JavaScript","CSS"];
+    // // ... ваш код ...
 
-function sorted(arr){
-    return arr.slice().sort(); //slice() без аргументов создает копию массива;
-}
+    // alert(arrSorted); // CSS, HTML, JavaScript
+    // alert(arr); // HTML, JavaScript, CSS (без изменений)
+    // Постарайтесь сделать код как можно короче.
 
-let arrSorted = sorted(arr);
 
-alert(arr)
-alert(arrSorted);
-    
+    let arr = ["HTML", "JavaScript", "CSS"];
+
+    function sorted(arr) {
+        return arr.slice().sort(); //slice() без аргументов создает копию массива;
+    }
+
+    let arrSorted = sorted(arr);
+
+    alert(arr)
+    alert(arrSorted);
+
 </script>

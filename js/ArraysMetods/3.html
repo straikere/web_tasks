@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3</title>
 </head>
-<body>
-    
-</body>
-</html>
 
+<body>
+
+</body>
+
+</html>
 <script>
-    
+    // Задача 3
+    // У объекта есть свойство className, которое хранит список «классов» – слов, разделенных пробелами:
+    // var obj = {
+    //     className: 'open menu'
+    // };
+    // Напишите функцию removeClass(obj, cls), которая удаляет класс cls, если он есть:
+    // removeClass(obj, 'open'); // obj.className='menu'
+    // removeClass(obj, 'blabla'); // без изменений (нет такого класса)
+    // P.S.Дополнительное усложнение.Функция должна корректно обрабатывать дублирование класса в строке:
+    // obj = {
+    //     className: 'my menu menu'
+    // };
+    // removeClass(obj, 'menu');
+    // alert(obj.className); // 'my'
+    // Лишних пробелов после функции образовываться не должно.
+
+    var obj = {
+        className: 'my open menu menu'
+    };
+
+    function removeClass(obj, cls) {
+        cls = cls.split(' ').join(''); //избавляет cls от лишних пробелов
+        let arr = obj.className.split(" ") //разбивает строку в массив (разделитель пробел)
+        while (arr.indexOf(cls) != -1) { // цикл выполняется если в массиве найден cls, но cls может быть и на 0 позиции, по этому стоит != -1
+            arr.splice(arr.indexOf(cls),1); //удаляет данные из массива по позиции которая формируется из результату indexOf
+        }
+        obj.className = arr.join(" ")// собирает масив в строку
+
+    }
+
+    removeClass(obj, '  open   '); // obj.className='my menu menu'
+    removeClass(obj, 'blabla'); // без изменений (нет такого класса)
+    removeClass(obj, 'menu'); // obj.className='my'
+
 </script>

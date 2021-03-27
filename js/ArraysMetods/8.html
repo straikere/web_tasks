@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8</title>
 </head>
-<body>
-    
-</body>
-</html>
 
+<body>
+
+</body>
+
+</html>
 <script>
+    // Задача 8
+    // Напишите код, который отсортирует массив объектов people по полю age.
+    // Например:
+    // var vasya = { name: "Вася", age: 23 };
+    // var masha = { name: "Маша", age: 18 };
+    // var vovochka = { name: "Вовочка", age: 6 };
+
+    // var people = [ vasya , masha , vovochka ];
+
+    // ... ваш код ...
+
+    // // теперь people: [vovochka, masha, vasya]
+    // alert(people[0].age) // 6
+    // Выведите список имён в массиве после сортировки.
+
+    let vasya = { name: "Вася", age: 23 };
+    let masha = { name: "Маша", age: 18 };
+    let vovochka = { name: "Вовочка", age: 6 };
+
+    let people = [vasya, masha,vovochka];
+
+    people.sort((a, b) => a.age > b.age ? 1 : -1); //я бы до этого не додумался :с
     
+    //let people = [vovochka, masha, vasya];
+
+    alert(people[0].age) // 6
+
 </script>
