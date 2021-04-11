@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача 8
+// Напишите функцию formatDate(date), которая выводит дату date в формате дд.мм.гг:
+// Например:
+// var d = new Date(2014, 0, 30); // 30 января 2014
+// alert( formatDate(d) ); // '30.01.14'
+// P.S. Обратите внимание, ведущие нули должны присутствовать, то есть 1 января 2001 должно быть 01.01.01, а не 1.1.1.
+
+let d = new Date(2014, 0, 30);
+function formatDate(d){
+    let days = d.getDate()
+    let month = d.getMonth() + 1
+    let year = d.getFullYear() % 100
+    return `${ days < 10 ? '0' + days : days}.${ month < 10 ? '0' + month : month }.${ year < 10 ? '0' + year : year }`
+}
+alert( formatDate(d) ); // '30.01.14'
+</script>

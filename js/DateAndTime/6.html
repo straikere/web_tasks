@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+// Задача 6
+// Напишите функцию getSecondsToday() которая возвращает, сколько секунд прошло с начала сегодняшнего дня.
+// Например, если сейчас 10:00 и не было перехода на зимнее/летнее время, то:
+// getSecondsToday() == 36000 // (3600 * 10)
+// Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
+
+function getSecondsToday(){
+    let date = new Date()
+    return date.getHours()*3600 + date.getMinutes()*60 + date.getSeconds()
+}
+alert(getSecondsToday())
+</script>

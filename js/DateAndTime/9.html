@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача 9
+// Напишите функцию formatDate(date), которая форматирует дату date так:
+// •	Если со времени date прошло менее секунды, то возвращает "только что".
+// •	Иначе если со времени date прошло менее минуты, то "n сек. назад".
+// •	Иначе если прошло меньше часа, то "m мин. назад".
+// •	Иначе полная дата в формате "дд.мм.гг чч:мм".
+// Например:
+// function formatDate(date) { /* ваш код */ }
+
+// alert( formatDate(new Date(new Date - 1)) ); // "только что"
+
+// alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 сек. назад"
+
+// alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 мин. назад"
+
+function formatDate(date) { 
+    let razn = new Date() - date
+    let min = Math.floor(+razn / 60000)
+    return razn < 1000 ? "только что":
+    razn < 1000 * 60 ? `${razn / 1000} сек. назад`:
+    min < 60 ? min + ' мин. назад':
+    `${formatDate(date)}`
+    function formatDate(d){
+    let days = d.getDate()
+    let month = d.getMonth() + 1
+    let year = d.getFullYear() % 100
+    let hour = date.getHours();
+    let minutes = date.getMinutes();    
+    return `${ days < 10 ? '0' + days : days}.${ month < 10 ? '0' + month : month }.${ year < 10 ? '0' + year : year } ${hour < 10 ? '0' + hour : hour}:${minutes < 10 ? '0' + minutes : minutes}`
+}
+}
+
+alert( formatDate(new Date(new Date - 1)) ); // "только что"
+
+alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 сек. назад"
+
+alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 мин. назад"
+
+alert( formatDate(new Date(new Date - 86400 * 1000)) ); // вчерашний день 
+</script>

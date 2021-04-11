@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+// Задача 5
+// Напишите функцию getLastDayOfMonth(year, month), которая возвращает последний день месяца.
+// Параметры:
+// •	year – 4-значный год, например 2012.
+// •	month – месяц от 0 до 11.
+// Например, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль).
+
+function getLastDayOfMonth(year, month){
+    let date = new Date(year,month+1,0)
+    return date.getDate()
+}
+alert(getLastDayOfMonth(2012, 1))
+</script>

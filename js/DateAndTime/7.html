@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+// Задача 7
+// Напишите функцию getSecondsToTomorrow() которая возвращает, сколько секунд осталось до завтра.
+// Например, если сейчас 23:00, то:
+// getSecondsToTomorrow() == 3600
+// P.S. Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
+
+function getSecondsToTomorrow(){
+    let date = new Date()
+    return 86400 - (date.getHours()*3600 + date.getMinutes()*60 + date.getSeconds())
+}
+alert(getSecondsToTomorrow())
+</script>

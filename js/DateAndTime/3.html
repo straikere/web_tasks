@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+// Задача 3
+// Напишите функцию, getLocalDay(date) которая возвращает день недели для даты date.
+// День нужно возвратить в европейской нумерации, т.е. понедельник имеет номер 1, вторник номер 2, …, воскресенье – номер 7.
+// var date = new Date(2012, 0, 3);  // 3 янв 2012
+// alert( getLocalDay(date) );       // вторник, выведет 2
+let date = new Date(2012, 0, 3);
+function getLocalDay(date){   
+    return date.getDay() != 0 ? date.getDay() : 7
+}
+alert( getLocalDay(date) );
+</script>
