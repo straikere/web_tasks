@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача 5
+// Если во внутренней функции есть своя переменная с именем currentCount – можно ли в ней получить currentCountиз внешней функции?
+// function makeCounter() {
+//   var currentCount = 1;
+
+//   return function() {
+//     var currentCount;
+//     // можно ли здесь вывести currentCount из внешней функции (равный 1)?
+//   };
+// }
+
+function makeCounter() {
+  var currentCount = 1;
+
+  return function() {
+    var currentCount;
+    // можно ли здесь вывести currentCount из внешней функции (равный 1)?
+    //Да, но только если убрать var, тогда переменная береться с пердыдущего окружения. Если не убирать var то тогда вывести переменную с таким же именем с другого окружения нельзя 
+  };
+}
+
+
+</script>

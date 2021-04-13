@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача 2
+// Каков будет результат выполнения этого кода?
+// var value = 0;
+
+// function f() {
+//   if (1) {
+//     value = true;
+//   } else {
+//     var value = false;
+//   }
+
+//   alert( value );
+// }
+
+// f();
+// Изменится ли внешняя переменная value ?
+// P.S. Какими будут ответы, если из строки var value = false убрать var?
+
+var value = 0;
+
+function f() {
+  if (1) {
+    value = true;
+  } else {
+    var value = false;
+  }
+
+  alert( value );
+}
+
+f();
+
+/*
+В первом варианте результатом выполнения будет true так как инициализация переменной происходит внутри функции даже в  блоке кода который никогда не выполнится и внутри 
+функции будет переменная value, внешняя же останется 0
+
+Во втором случае так же будет true но функция не найдет в своём контексте переменную value и обратиться наружу и
+изменит внешнюю переменную на true
+*/
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача 1
+// Что будет, если вызов say('Вася'); стоит в самом-самом начале, в первой строке кода?
+
+// say('Вася'); // Что выведет? Не будет ли ошибки?
+
+// var phrase = 'Привет';
+
+// function say(name) {
+//   alert( name + ", " + phrase );
+// }
+
+say('Вася'); // Что выведет? Не будет ли ошибки?
+
+var phrase = 'Привет';
+
+function say(name) {
+  alert( name + ", " + phrase );
+}
+
+/*выведет "Вася, undefined" переменные var считаются объявленными с самого начала исполнения 
+функции вне зависимости от того, в каком месте функции реально находятся их объявления.
+Но присвоение происходит после выполнения функции по этому phrase = undefined */
+</script>

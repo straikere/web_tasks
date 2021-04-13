@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача 9
+// Добавьте буферу из решения задачи Функция - строковый буфер метод buffer.clear(), который будет очищать текущее содержимое буфера:
+// function makeBuffer() {
+//   ...ваш код...
+// }
+
+// var buffer = makeBuffer();
+
+// buffer("Тест");
+// buffer(" тебя не съест ");
+// alert( buffer() ); // Тест тебя не съест
+
+// buffer.clear();
+
+// alert( buffer() ); // ""
+
+
+function makeBuffer() {
+    let arr = [];
+    function buffer(words){
+        if(arguments.length == 0){
+            return arr.join('')
+        }
+        arr.push(words)   
+    };
+    buffer.clear = function (){
+        arr = [];
+    };
+    return buffer;
+}
+
+var buffer = makeBuffer();
+
+buffer("Тест");
+buffer(" тебя не съест ");
+alert( buffer() ); // Тест тебя не съест
+
+buffer.clear();
+
+alert( buffer() ); // ""
+
+
+</script>
