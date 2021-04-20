@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача 5
+// Создайте объект calculator с тремя методами:
+// •	read() запрашивает prompt два значения и сохраняет их как свойства объекта
+// •	sum() возвращает сумму этих двух значений
+// •	mul() возвращает произведение этих двух значений
+// var calculator = {
+//   ...ваш код...
+// }
+
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+
+let calculator = {
+    read(){
+        this.a = +prompt('a',0);
+        this.b = +prompt('b',0);
+
+    },
+    sum(){
+        return this.a+this.b
+    },
+    mul(){
+        return this.a*this.b
+    },
+    
+}
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+
+</script>

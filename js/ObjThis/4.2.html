@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Задача
+// Что выведет alert в этом коде? Почему?
+// var name = "";
+
+// var user = {
+//   name: "Василий",
+
+//   export: function() {
+//     return {
+//       value: this
+//     };
+//   }
+
+// };
+
+// alert( user.export().value.name );
+
+var name = "";
+
+var user = {
+  name: "Василий",
+
+  export: function() {
+    return {
+      value: this
+    };
+  }
+
+};
+
+
+// alert( user.export().value.name ); //Василий Потому что метод export объекта user возвращает объект в котором под ключем value объект user в котором name = Василий
+
+
+
+
+</script>
